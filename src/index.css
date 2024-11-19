@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toaster-bg: rgba(255, 255, 255, 0.9);
+  --toaster-text: #1a1a1a;
+}
+
+[data-theme='dark'] {
+  --toaster-bg: rgba(31, 41, 55, 0.9);
+  --toaster-text: #ffffff;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+}
